@@ -383,17 +383,17 @@ export default function Page() {
   </div>
 
   <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6 md:mt-12 lg:grid-cols-3">
-    {projects.map((project) => (
+   {projects.map((project) => (
   <Link
     key={project.name}
     href={project.link}
     target="_blank"
     rel="noopener noreferrer"
-    className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 p-6 sm:p-8 transition-all duration-300 hover:border-slate-700 ${project.span}`}
+    className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:shadow-2xl hover:shadow-slate-950/80 active:scale-[0.98] active:border-slate-700 ${project.span}`}
   >
-    {/* Ambient Glow Background */}
+    {/* Subtle Ambient Glow Background */}
     <div
-      className={`pointer-events-none absolute -inset-px bg-gradient-to-br ${project.tone} opacity-40 transition-opacity duration-300 group-hover:opacity-70`}
+      className={`pointer-events-none absolute -inset-px bg-gradient-to-br ${project.tone} opacity-20 transition-opacity duration-300 group-hover:opacity-50 group-active:opacity-60`}
     />
 
     {/* Top Text Details + Arrow Icon */}
@@ -402,22 +402,22 @@ export default function Page() {
         <span className="text-xs font-medium text-slate-400 sm:text-sm">{project.type}</span>
         <h3 className="mt-1 text-xl font-semibold text-white sm:text-2xl">{project.name}</h3>
       </div>
-      {/* Top-Right Arrow Icon on Hover */}
-      <div className="rounded-full border border-slate-800 bg-slate-900/80 p-2 text-slate-400 transition-colors duration-200 group-hover:border-slate-700 group-hover:text-white">
-        <svg className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      {/* Top-Right External Arrow Icon */}
+      <div className="rounded-full border border-slate-800 bg-slate-900/80 p-2.5 text-slate-400 transition-all duration-300 group-hover:border-slate-700 group-hover:bg-slate-800 group-hover:text-white group-active:border-slate-700 group-active:bg-slate-800 group-active:text-white">
+        <svg className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-active:-translate-y-0.5 group-active:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
         </svg>
       </div>
     </div>
 
-    {/* Full-Height Image Container */}
-    <div className="relative z-10 aspect-[16/10] sm:aspect-[16/9] w-full flex-1 overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900">
+    {/* Image Container with Border & Scale Effects */}
+    <div className="relative z-10 aspect-[16/10] sm:aspect-[16/9] w-full flex-1 overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900 transition-colors duration-300 group-hover:border-slate-700/80 group-active:border-slate-700/80">
       <Image
         src={project.image}
         alt={`${project.name} Preview`}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 66vw"
-        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        className="object-cover object-top transition-transform duration-500 group-hover:scale-105 group-active:scale-105"
       />
     </div>
   </Link>
