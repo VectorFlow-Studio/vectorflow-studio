@@ -623,7 +623,7 @@ export default function Page() {
     href="https://nextjs.org"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-slate-900/80 px-2 py-0.5 font-medium text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
+    className="inline-flex items-center gap-1.5  px-2 py-0.5 font-medium text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
   >
     <svg className="h-5 w-5 fill-current" viewBox="0 0 180 180">
       <mask height="180" id="mask0" maskUnits="userSpaceOnUse" width="180" x="0" y="0">
@@ -655,7 +655,7 @@ export default function Page() {
     href="https://tailwindcss.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-slate-900/80 px-2 py-0.5 font-medium text-slate-300 transition-colors hover:border-slate-700 hover:text-sky-400"
+    className="inline-flex items-center gap-1.5 px-2 py-0.5 font-medium text-slate-300 transition-colors hover:border-slate-700 hover:text-sky-400"
   >
     <svg className="h-3.5 w-3.5 fill-sky-400" viewBox="0 0 24 24">
       <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z" />
